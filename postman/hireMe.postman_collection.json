@@ -1,0 +1,1139 @@
+{
+	"info": {
+		"_postman_id": "a6d8555a-aec7-4b75-9955-d9a691b45ea9",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48877441",
+		"_collection_link": "https://mohadebchandrapall-3306798.postman.co/workspace/mohadeb-chandrapall's-Workspace~ea99f7db-4065-45bb-8644-cc1c51789270/collection/48877441-a6d8555a-aec7-4b75-9955-d9a691b45ea9?action=share&source=collection_link&creator=48877441"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"emptest\",\r\n    \"email\": \"emptest1@gmail.com\",\r\n    \"password\": \"kkkkkk\",\r\n    \"role\": \"EMPLOYER\",\r\n    \"companyName\": \"ABC Ltd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"sobuj\",\r\n    \"email\": \"sobuj1@gmail.com\",\r\n    \"password\": \"kkkkkk\",\r\n    \"role\": \"JOB_SEEKER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "420"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a4-3GAnIBTWIyKDU+NQd0LM518Dj5c\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 11:26:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"sobuj\",\n        \"email\": \"sobuj1@gmail.com\",\n        \"role\": \"JOB_SEEKER\",\n        \"_id\": \"6936b5cf91801c12d5fd5e34\",\n        \"createdAt\": \"2025-12-08T11:26:07.818Z\",\n        \"updatedAt\": \"2025-12-08T11:26:07.818Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2YjVjZjkxODAxYzEyZDVmZDVlMzQiLCJyb2xlIjoiSk9CX1NFRUtFUiIsImlhdCI6MTc2NTE5MzE2NywiZXhwIjoxNzY1Mjc5NTY3fQ.0uUam4Tc3TOr0q5YzP5_QqrCmN8dB2Rvyck5wwbDwFk\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"emptest1@gmail.com\",\r\n    \"password\": \"kkkkkk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "443"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bb-1hf1O9P3j+d9pwihDOPyIvFX8JQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 07:18:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"69364ed58c74a953828bcef3\",\n        \"name\": \"emptest\",\n        \"email\": \"emptest1@gmail.com\",\n        \"role\": \"EMPLOYER\",\n        \"companyName\": \"ABC Ltd\",\n        \"createdAt\": \"2025-12-08T04:06:45.767Z\",\n        \"updatedAt\": \"2025-12-08T04:06:45.767Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2NGVkNThjNzRhOTUzODI4YmNlZjMiLCJyb2xlIjoiRU1QTE9ZRVIiLCJpYXQiOjE3NjUxNzgzMDEsImV4cCI6MTc2NTI2NDcwMX0.wQ5SMcktr2AprmSG1QzuePAzeiMZL2dHHIY-jwUbj7U\"\n}"
+						}
+					]
+				},
+				{
+					"name": "me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2NGVkNThjNzRhOTUzODI4YmNlZjMiLCJyb2xlIjoiRU1QTE9ZRVIiLCJpYXQiOjE3NjUxODA1MTYsImV4cCI6MTc2NTI2NjkxNn0.FgCHJbs-J0NUYGyxUBsINrsSd-A3v-7hcEnseAa1cX0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "me",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/auth/me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "232"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e8-WkanuZ6sZynNBcKBnGkp8IjuTP4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 09:26:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"69364ed58c74a953828bcef3\",\n        \"name\": \"emptest\",\n        \"email\": \"emptest1@gmail.com\",\n        \"role\": \"EMPLOYER\",\n        \"companyName\": \"ABC Ltd\",\n        \"createdAt\": \"2025-12-08T04:06:45.767Z\",\n        \"updatedAt\": \"2025-12-08T04:06:45.767Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users-admin",
+			"item": [
+				{
+					"name": "user-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{}}/users",
+							"host": [
+								"{{}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{}}/users",
+							"host": [
+								"{{}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{}}/users/:id",
+							"host": [
+								"{{}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{}}/users/:id",
+							"host": [
+								"{{}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{}}/users/:id",
+							"host": [
+								"{{}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "job-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/jobs",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "job-create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"junior developer\",\r\n    \"description\": \"MERN backend developmennt \",\r\n    \"companyName\": \"ABC company\",\r\n    \"location\": \"Mohakhali\",\r\n    \"salaryRange\": \"15-20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/jobs",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"jobs"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "338"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"152-mJXkCE6yIg8s+TGYzYgwrMDd4g8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 07:49:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"title\": \"junior developer\",\n        \"description\": \"MERN backend developmennt \",\n        \"companyName\": \"ABC Ltd\",\n        \"recruiter\": \"69364ed58c74a953828bcef3\",\n        \"location\": \"Mohakhali\",\n        \"salaryRange\": \"15-20\",\n        \"status\": \"OPEN\",\n        \"_id\": \"69368325c0103db12e6cb941\",\n        \"createdAt\": \"2025-12-08T07:49:57.415Z\",\n        \"updatedAt\": \"2025-12-08T07:49:57.415Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "job-update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/jobs/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"jobs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "job-update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"senior developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/jobs/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"jobs",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "69368325c0103db12e6cb941"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "338"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"152-KrKRIwb+1CCujWhlRYgokCkOT6E\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 08:01:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"69368325c0103db12e6cb941\",\n        \"title\": \"senior developer\",\n        \"description\": \"MERN backend developmennt \",\n        \"companyName\": \"ABC Ltd\",\n        \"recruiter\": \"69364ed58c74a953828bcef3\",\n        \"location\": \"Mohakhali\",\n        \"salaryRange\": \"15-20\",\n        \"status\": \"OPEN\",\n        \"createdAt\": \"2025-12-08T07:49:57.415Z\",\n        \"updatedAt\": \"2025-12-08T08:01:14.318Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "job-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/jobs/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"jobs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "job-delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/jobs/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"jobs",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "69368325c0103db12e6cb941"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "338"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"152-KrKRIwb+1CCujWhlRYgokCkOT6E\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 08:02:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"69368325c0103db12e6cb941\",\n        \"title\": \"senior developer\",\n        \"description\": \"MERN backend developmennt \",\n        \"companyName\": \"ABC Ltd\",\n        \"recruiter\": \"69364ed58c74a953828bcef3\",\n        \"location\": \"Mohakhali\",\n        \"salaryRange\": \"15-20\",\n        \"status\": \"OPEN\",\n        \"createdAt\": \"2025-12-08T07:49:57.415Z\",\n        \"updatedAt\": \"2025-12-08T08:01:14.318Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "applications",
+			"item": [
+				{
+					"name": "apply-job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/applications/jobs/:jobId/apply",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"applications",
+								"jobs",
+								":jobId",
+								"apply"
+							],
+							"variable": [
+								{
+									"key": "jobId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "apply-job",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cv",
+											"type": "file",
+											"src": "/C:/Users/Mohadeb12/Downloads/soroardi.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/applications/jobs/:jobId/apply",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"applications",
+										"jobs",
+										":jobId",
+										"apply"
+									],
+									"variable": [
+										{
+											"key": "jobId",
+											"value": "6936b66b91801c12d5fd5e38"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "693"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b5-MYeTXW+mPnnn/N06vDrqN/yyUe8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 11:32:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"application\": {\n            \"job\": \"6936b66b91801c12d5fd5e38\",\n            \"applicant\": \"6936b5cf91801c12d5fd5e34\",\n            \"cvUrl\": \"/uploads/cv/1765193530232-137770400.pdf\",\n            \"status\": \"PENDING\",\n            \"paymentStatus\": \"SUCCESS\",\n            \"payment\": \"6936b73a91801c12d5fd5e3d\",\n            \"_id\": \"6936b73a91801c12d5fd5e3f\",\n            \"createdAt\": \"2025-12-08T11:32:10.379Z\",\n            \"updatedAt\": \"2025-12-08T11:32:10.379Z\",\n            \"__v\": 0\n        },\n        \"payment\": {\n            \"user\": \"6936b5cf91801c12d5fd5e34\",\n            \"job\": \"6936b66b91801c12d5fd5e38\",\n            \"amount\": 100,\n            \"currency\": \"BDT\",\n            \"status\": \"SUCCESS\",\n            \"transactionId\": \"TXN-1765193530322-679135853\",\n            \"_id\": \"6936b73a91801c12d5fd5e3d\",\n            \"paidAt\": \"2025-12-08T11:32:10.322Z\",\n            \"createdAt\": \"2025-12-08T11:32:10.322Z\",\n            \"updatedAt\": \"2025-12-08T11:32:10.322Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "my-applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/applications/my",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"applications",
+								"my"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "my-applications",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/applications/my",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"applications",
+										"my"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "432"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b0-ttjYsWFaGOQChn/0OeQhnsm8Ffc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 11:37:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6936b73a91801c12d5fd5e3f\",\n            \"job\": {\n                \"_id\": \"6936b66b91801c12d5fd5e38\",\n                \"title\": \"junior developer\",\n                \"companyName\": \"ABC Ltd\",\n                \"location\": \"Mohakhali\"\n            },\n            \"applicant\": \"6936b5cf91801c12d5fd5e34\",\n            \"cvUrl\": \"/uploads/cv/1765193530232-137770400.pdf\",\n            \"status\": \"PENDING\",\n            \"paymentStatus\": \"SUCCESS\",\n            \"payment\": \"6936b73a91801c12d5fd5e3d\",\n            \"createdAt\": \"2025-12-08T11:32:10.379Z\",\n            \"updatedAt\": \"2025-12-08T11:32:10.379Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "job-applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/applications/job/:jobId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"applications",
+								"job",
+								":jobId"
+							],
+							"variable": [
+								{
+									"key": "jobId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "application-updateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/applications/:id/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"applications",
+								":id",
+								"status"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payments-admin",
+			"item": [
+				{
+					"name": "payment-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2NTE1OTZhYjFmNDc0ODNiNTQ1NDMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjUxOTgyMDEsImV4cCI6MTc2NTI4NDYwMX0.lHJXGzPMK60pfDHB1_5s22BlEb7C6qe22RNBrcWHXe4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/payments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment-list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/payments",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"payments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "812"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32c-mz2zHDGWEtu/mFJMmJux6IAGQxw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 12:50:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6936b73a91801c12d5fd5e3d\",\n            \"user\": {\n                \"_id\": \"6936b5cf91801c12d5fd5e34\",\n                \"name\": \"sobuj\",\n                \"email\": \"sobuj1@gmail.com\",\n                \"role\": \"JOB_SEEKER\"\n            },\n            \"job\": {\n                \"_id\": \"6936b66b91801c12d5fd5e38\",\n                \"title\": \"junior developer\",\n                \"companyName\": \"ABC Ltd\"\n            },\n            \"amount\": 100,\n            \"currency\": \"BDT\",\n            \"status\": \"SUCCESS\",\n            \"transactionId\": \"TXN-1765193530322-679135853\",\n            \"paidAt\": \"2025-12-08T11:32:10.322Z\",\n            \"createdAt\": \"2025-12-08T11:32:10.322Z\",\n            \"updatedAt\": \"2025-12-08T11:32:10.435Z\",\n            \"__v\": 0,\n            \"application\": {\n                \"_id\": \"6936b73a91801c12d5fd5e3f\",\n                \"job\": \"6936b66b91801c12d5fd5e38\",\n                \"applicant\": \"6936b5cf91801c12d5fd5e34\",\n                \"cvUrl\": \"/uploads/cv/1765193530232-137770400.pdf\",\n                \"status\": \"PENDING\",\n                \"paymentStatus\": \"SUCCESS\",\n                \"payment\": \"6936b73a91801c12d5fd5e3d\",\n                \"createdAt\": \"2025-12-08T11:32:10.379Z\",\n                \"updatedAt\": \"2025-12-08T11:32:10.379Z\",\n                \"__v\": 0\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "payment-getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2NTE1OTZhYjFmNDc0ODNiNTQ1NDMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjUxOTgyMDEsImV4cCI6MTc2NTI4NDYwMX0.lHJXGzPMK60pfDHB1_5s22BlEb7C6qe22RNBrcWHXe4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/payments/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6936b73a91801c12d5fd5e3d"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment-getById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/payments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"payments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6936b73a91801c12d5fd5e3d"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "810"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32a-nvjllrZGcWnXaQfCL5nH5C1h7Gs\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 12:52:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6936b73a91801c12d5fd5e3d\",\n        \"user\": {\n            \"_id\": \"6936b5cf91801c12d5fd5e34\",\n            \"name\": \"sobuj\",\n            \"email\": \"sobuj1@gmail.com\",\n            \"role\": \"JOB_SEEKER\"\n        },\n        \"job\": {\n            \"_id\": \"6936b66b91801c12d5fd5e38\",\n            \"title\": \"junior developer\",\n            \"companyName\": \"ABC Ltd\"\n        },\n        \"amount\": 100,\n        \"currency\": \"BDT\",\n        \"status\": \"SUCCESS\",\n        \"transactionId\": \"TXN-1765193530322-679135853\",\n        \"paidAt\": \"2025-12-08T11:32:10.322Z\",\n        \"createdAt\": \"2025-12-08T11:32:10.322Z\",\n        \"updatedAt\": \"2025-12-08T11:32:10.435Z\",\n        \"__v\": 0,\n        \"application\": {\n            \"_id\": \"6936b73a91801c12d5fd5e3f\",\n            \"job\": \"6936b66b91801c12d5fd5e38\",\n            \"applicant\": \"6936b5cf91801c12d5fd5e34\",\n            \"cvUrl\": \"/uploads/cv/1765193530232-137770400.pdf\",\n            \"status\": \"PENDING\",\n            \"paymentStatus\": \"SUCCESS\",\n            \"payment\": \"6936b73a91801c12d5fd5e3d\",\n            \"createdAt\": \"2025-12-08T11:32:10.379Z\",\n            \"updatedAt\": \"2025-12-08T11:32:10.379Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": ""
+		}
+	]
+}
