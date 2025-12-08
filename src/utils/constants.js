@@ -1,0 +1,21 @@
+export const ROLES = {
+  ADMIN: 'ADMIN',
+  EMPLOYER: 'EMPLOYER',
+  JOB_SEEKER: 'JOB_SEEKER'
+};
+
+export const JOB_STATUS = {
+  OPEN: 'OPEN',
+  CLOSED: 'CLOSED'
+};
+
+export const APPLICATION_STATUS = {
+  PENDING: 'PENDING',
+  ACCEPTED: 'ACCEPTED',
+  REJECTED: 'REJECTED'
+};
+
+export const PAYMENT_STATUS = {
+  SUCCESS: 'SUCCESS',
+  FAILED: 'FAILED'
+};
