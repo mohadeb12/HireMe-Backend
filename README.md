@@ -20,3 +20,23 @@ bash--
 npm install
 
 Postman collection: postman/hireMe.postman_collection.json
+
+1.3 Environment variables
+
+Create a ".env" file in the project root:
+
+```env
+PORT=`your port no`
+MONGO_URI=mongodb://127.0.0.1:27017/hireme
+JWT_SECRET=supersecretkey
+JWT_EXPIRES_IN=1d
+ADMIN_EMAIL=admin@test.com
+ADMIN_PASSWORD=admin123
+
+1.4 Create initial admin user (run once)
+
+Before starting the server for the first time, run: npm run seed
+
+Run the server: npm run dev
+
+Base URL: http://localhost:`your port no`/api/v1

@@ -1,22 +1,24 @@
 import bcrypt from 'bcryptjs';
-import connectDB from './config/db.js';
-import User from './modules/user/user.model.js';
-import { ROLES } from './utils/constants.js';
+import connectDB from '../config/db.js';
+import User from '../modules/user/user.model.js';
+import { ROLES } from './constants.js';
 
 const run = async () => {
   try {
     await connectDB();
 
-    const password = 'admin123';
+    const email = process.env.ADMIN_EMAIL;
+    const password = process.env.ADMIN_PASSWORD;
+
     const hashed = await bcrypt.hash(password, 10);
 
-    const existing = await User.findOne({ email: 'admin@test.com' });
+    const existing = await User.findOne({ email });
     if (existing) {
       console.log('Admin already exists:', existing.email);
     } else {
       const admin = await User.create({
         name: 'Super Admin',
-        email: 'admin@test.com',
+        email,
         password: hashed,
         role: ROLES.ADMIN
       });
