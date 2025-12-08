@@ -15,5 +15,8 @@ The system uses JWT-based authentication and role-based access control (RBAC).
 
 1.2 Install dependencies
 
-bash
+bash--
+
 npm install
+
+Postman collection: postman/hireMe.postman_collection.json
