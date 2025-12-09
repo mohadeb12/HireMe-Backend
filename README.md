@@ -40,3 +40,5 @@ Before starting the server for the first time, run: npm run seed
 Run the server: npm run dev
 
 Base URL: http://localhost:`your port no`/api/v1
+
+live server baseUrl : https://render.com/docs/web-services#port-binding
