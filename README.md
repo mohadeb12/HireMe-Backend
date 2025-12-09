@@ -39,6 +39,10 @@ Before starting the server for the first time, run: npm run seed
 
 Run the server: npm run dev
 
-Base URL: http://localhost:`your port no`/api/v1
+Base URL: http://localhost:`your port no`
 
-live server baseUrl : https://render.com/docs/web-services#port-binding
+example : http://localhost:5000/api/v1/auth/register
+
+live server baseUrl : https://hireme-backend-mvux.onrender.com
+
+example : https://hireme-backend-mvux.onrender.com/api/v1/auth/register

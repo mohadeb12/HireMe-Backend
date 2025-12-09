@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"emptest\",\r\n    \"email\": \"emptest1@gmail.com\",\r\n    \"password\": \"kkkkkk\",\r\n    \"role\": \"EMPLOYER\",\r\n    \"companyName\": \"ABC Ltd\"\r\n}",
+							"raw": "{\r\n    \"name\": \"sakib\",\r\n    \"email\": \"sakib1@gmail.com\",\r\n    \"password\": \"kkkkkk\",\r\n    \"role\": \"JOB_SEEKER\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -25,11 +25,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/auth/register",
+							"raw": "{{baseUrl}}/api/v1/auth/register",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"auth",
 								"register"
 							]
@@ -63,7 +65,7 @@
 							},
 							"status": "Created",
 							"code": 201,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -110,14 +112,21 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\r\n    \"email\": \"rakib1@gmail.com\",\r\n    \"password\": \"kkkkkk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/auth/login",
+							"raw": "{{baseUrl}}/api/v1/auth/login",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"auth",
 								"login"
 							]
@@ -151,7 +160,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -236,7 +245,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -291,11 +300,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{}}/users",
+							"raw": "{{baseUrl}}/api/v1/users",
 							"host": [
-								"{{}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"users"
 							]
 						}
@@ -308,6 +319,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -315,11 +336,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{}}/users",
+							"raw": "{{baseUrl}}/api/v1/users",
 							"host": [
-								"{{}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"users"
 							]
 						}
@@ -339,11 +362,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{}}/users/:id",
+							"raw": "{{baseUrl}}/api/v1/users/:id",
 							"host": [
-								"{{}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"users",
 								":id"
 							],
@@ -367,11 +392,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{}}/users/:id",
+							"raw": "{{baseUrl}}/api/v1/users/:id",
 							"host": [
-								"{{}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"users",
 								":id"
 							],
@@ -395,11 +422,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{}}/users/:id",
+							"raw": "{{baseUrl}}/api/v1/users/:id",
 							"host": [
-								"{{}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"users",
 								":id"
 							],
@@ -421,18 +450,35 @@
 				{
 					"name": "job-create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2NGVkNThjNzRhOTUzODI4YmNlZjMiLCJyb2xlIjoiRU1QTE9ZRVIiLCJpYXQiOjE3NjUxOTMyOTIsImV4cCI6MTc2NTI3OTY5Mn0.tcqaRDJzeLk2FQJ9eoKzXHvMhU4vYsbuVgvOH-6HwJo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\r\n    \"title\": \"junior developer\",\r\n    \"description\": \"MERN backend developmennt \",\r\n    \"companyName\": \"ABC company\",\r\n    \"location\": \"Mohakhali\",\r\n    \"salaryRange\": \"15-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/jobs",
+							"raw": "{{baseUrl}}/api/v1/jobs",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"jobs"
 							]
 						}
@@ -464,7 +510,7 @@
 							},
 							"status": "Created",
 							"code": 201,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -507,21 +553,42 @@
 				{
 					"name": "job-update",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2NGVkNThjNzRhOTUzODI4YmNlZjMiLCJyb2xlIjoiRU1QTE9ZRVIiLCJpYXQiOjE3NjUxODA1MTYsImV4cCI6MTc2NTI2NjkxNn0.FgCHJbs-J0NUYGyxUBsINrsSd-A3v-7hcEnseAa1cX0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"senior developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{baseUrl}}/jobs/:id",
+							"raw": "{{baseUrl}}/api/v1/jobs/:id",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"jobs",
 								":id"
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": ""
+									"value": "69368325c0103db12e6cb941"
 								}
 							]
 						}
@@ -560,7 +627,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -603,21 +670,33 @@
 				{
 					"name": "job-delete",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2NGVkNThjNzRhOTUzODI4YmNlZjMiLCJyb2xlIjoiRU1QTE9ZRVIiLCJpYXQiOjE3NjUxODA1MTYsImV4cCI6MTc2NTI2NjkxNn0.FgCHJbs-J0NUYGyxUBsINrsSd-A3v-7hcEnseAa1cX0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/jobs/:id",
+							"raw": "{{baseUrl}}/api/v1/jobs/:id",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"jobs",
 								":id"
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": ""
+									"value": "69368325c0103db12e6cb941"
 								}
 							]
 						}
@@ -647,7 +726,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -695,14 +774,36 @@
 				{
 					"name": "apply-job",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2YjVjZjkxODAxYzEyZDVmZDVlMzQiLCJyb2xlIjoiSk9CX1NFRUtFUiIsImlhdCI6MTc2NTE5MzQyNywiZXhwIjoxNzY1Mjc5ODI3fQ.TDvVj5qgyAntv_v_8aiRuHWEGl4jAUiq83RXILxP7Gk",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cv",
+									"type": "file",
+									"src": "/C:/Users/Mohadeb12/Downloads/soroardi.pdf"
+								}
+							]
+						},
 						"url": {
-							"raw": "{{baseUrl}}/applications/jobs/:jobId/apply",
+							"raw": "{{baseUrl}}/api/v1/applications/jobs/:jobId/apply",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"applications",
 								"jobs",
 								":jobId",
@@ -711,7 +812,7 @@
 							"variable": [
 								{
 									"key": "jobId",
-									"value": ""
+									"value": "6936b66b91801c12d5fd5e38"
 								}
 							]
 						}
@@ -753,7 +854,7 @@
 							},
 							"status": "Created",
 							"code": 201,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -796,14 +897,26 @@
 				{
 					"name": "my-applications",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM2YjVjZjkxODAxYzEyZDVmZDVlMzQiLCJyb2xlIjoiSk9CX1NFRUtFUiIsImlhdCI6MTc2NTE5MzQyNywiZXhwIjoxNzY1Mjc5ODI3fQ.TDvVj5qgyAntv_v_8aiRuHWEGl4jAUiq83RXILxP7Gk",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/applications/my",
+							"raw": "{{baseUrl}}/api/v1/applications/my",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"applications",
 								"my"
 							]
@@ -828,7 +941,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -874,11 +987,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/applications/job/:jobId",
+							"raw": "{{baseUrl}}/api/v1/applications/job/:jobId",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"applications",
 								"job",
 								":jobId"
@@ -899,11 +1014,13 @@
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/applications/:id/status",
+							"raw": "{{baseUrl}}/api/v1/applications/:id/status",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"applications",
 								":id",
 								"status"
@@ -939,11 +1056,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/payments",
+							"raw": "{{baseUrl}}/api/v1/payments",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"payments"
 							]
 						}
@@ -966,7 +1085,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1022,11 +1141,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/payments/:id",
+							"raw": "{{baseUrl}}/api/v1/payments/:id",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"payments",
 								":id"
 							],
@@ -1063,7 +1184,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "X-Powered-By",
